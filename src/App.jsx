@@ -1,10 +1,12 @@
-import React from 'react';
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='bg-red-800'>Welcome to the Book Store</h1>
+    <>
+      <div>
+          <Navbar/>
     </div>
+    </>
   );
 };
 
