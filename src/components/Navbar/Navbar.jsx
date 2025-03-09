@@ -1,6 +1,7 @@
 import { FaCaretDown } from "react-icons/fa";
 import Logo from "../../assets/website/logo.png";
-
+import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 const Menu = [
   {
@@ -33,7 +34,7 @@ const dropdownLinks = [
 ];
 const Navbar = () => {
   return (
-    <div className="shadow-lg">
+    <div className="shadow-lg bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="container py-3 sm:py-0">
         <div className="flex justify-between items-center">
           <div className="">
@@ -42,7 +43,10 @@ const Navbar = () => {
             </a>
             Book
           </div>
-          <div>
+                  <div className="flex items-center justify-between gap-4">
+                      <div>
+                          <DarkMode/>
+                      </div>
             <ul className="items-center gap-4 hidden sm:flex">
               {Menu.map((menu) => (
                 <li>
@@ -63,17 +67,26 @@ const Navbar = () => {
                   </span>{" "}
                 </a>
                 {/* dropdown Link section */}
-                <div className="absolute -left-9 z-[10] hidden group-hover:block text-black bg-white p-2">
+                <div className="absolute -left-9 z-[10] hidden group-hover:block text-black bg-white p-2 shadow-sm w-[150px]">
                   <ul>
                     {dropdownLinks.map((data) => (
                       <li key={data.id}>
-                        <a href={data.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">{data.name}</a>
+                        <a
+                          href={data.link}
+                          className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                        >
+                          {data.name}
+                        </a>
                       </li>
                     ))}
                   </ul>
                 </div>
               </li>
             </ul>
+            <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
+              Order
+              <FaCartShopping className="texxt-xl text-white drop-shadow-sm cursor-pointer" />
+            </button>
           </div>
         </div>
       </div>
