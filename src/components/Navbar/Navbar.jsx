@@ -32,7 +32,7 @@ const dropdownLinks = [
     link: "/#",
   },
 ];
-const Navbar = () => {
+const Navbar = ({ handleOrderPopup }) => {
   return (
     <div className="shadow-lg bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="container py-3 sm:py-0">
@@ -43,10 +43,10 @@ const Navbar = () => {
             </a>
             Book
           </div>
-                  <div className="flex items-center justify-between gap-4">
-                      <div>
-                          <DarkMode/>
-                      </div>
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <DarkMode />
+            </div>
             <ul className="items-center gap-4 hidden sm:flex">
               {Menu.map((menu) => (
                 <li>
@@ -83,7 +83,10 @@ const Navbar = () => {
                 </div>
               </li>
             </ul>
-            <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
+            <button
+              onClick={handleOrderPopup}
+              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300"
+            >
               Order
               <FaCartShopping className="texxt-xl text-white drop-shadow-sm cursor-pointer" />
             </button>

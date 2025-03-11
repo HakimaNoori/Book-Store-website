@@ -47,7 +47,10 @@ const AllBooks = () => {
       <div className="py-10">
         <div className="container placeholder-gray-100">
           {/* header */}
-          <div className="text-center mb-20 max-w-[400px] mx-auto">
+          <div
+            data-aos="slide-up"
+            className="text-center mb-20 max-w-[400px] mx-auto"
+          >
             <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               Trending Books
             </p>
@@ -58,7 +61,7 @@ const AllBooks = () => {
             </p>
           </div>
           {/* card */}
-          <div>
+          <div data-aos="slide-up">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
               {BooksData.map((data) => (
                 <div className="space-y-3">

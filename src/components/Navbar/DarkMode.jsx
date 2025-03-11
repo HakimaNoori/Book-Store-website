@@ -3,8 +3,7 @@ import Dark from "../../assets/website/dark-mode-button.png";
 import Light from "../../assets/website/light-mode-button.png";
 
 const DarkMode = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const element = document.documentElement;
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const DarkMode = () => {
   }, [theme]);
   return (
     <>
-      <div className="relative ">
+      <div className="relative">
         <img
           src={Light}
           alt="dark"
@@ -35,7 +34,7 @@ const DarkMode = () => {
           onClick={() =>
             setTheme((data) => (data === "dark" ? "light" : "dark"))
           }
-          className="w-12 cursor-pointer drop-shadow-[1px_1px_2px_rgba(0,0,0,0.5)] duration-300 "
+          className="w-12 cursor-pointer drop-shadow-[1px_1px_2px_rgba(0,0,0,0.5)] duration-300"
         />
       </div>
     </>

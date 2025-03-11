@@ -27,10 +27,10 @@ const BooksData = [
   },
 ];
 
-const BestBooks = () => {
+const BestBooks = ({ handleOrderPopup }) => {
   return (
     <>
-      <div className="py-10">
+      <div className="mt-10">
         <div className="container">
           {/* Header section */}
           <div className="text-center mb-20 max-w-[400px] mx-auto">
@@ -46,7 +46,10 @@ const BestBooks = () => {
           {/* Card section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-5 place-items-center">
             {BooksData.map((book) => (
-              <div className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]">
+              <div
+                data-aos="zoom-in"
+                className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
+              >
                 <div className="h-[100px]">
                   <img
                     src={book.img}
@@ -65,7 +68,10 @@ const BestBooks = () => {
                   <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                     {book.description}
                   </p>
-                  <button className="bg-primary from-primary to-secondary text-white px-4 py-2 rounded-full mt-4 hover:scale-105 duration-200 group-hover:bg-white group-hover:text-primary">
+                  <button
+                    onClick={handleOrderPopup}
+                    className="bg-primary from-primary to-secondary text-white px-4 py-2 rounded-full mt-4 hover:scale-105 duration-200 group-hover:bg-white group-hover:text-primary"
+                  >
                     Order Now
                   </button>
                 </div>
