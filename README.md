@@ -1,12 +1,14 @@
-# React + Vite
+# 📚✨ Online Book Store Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-The link Book Store Website leads to a visually appealing and user-friendly online book store. It showcases a collection of books with a clean design, smooth navigation, and responsive layout. Users can explore book categories, view details, and engage with an intuitive interface. Built with modern web technologies, the site ensures a seamless browsing experience. Perfect for book lovers looking for an elegant online book store concept! 
 
-Currently, two official plugins are available:
+# Screen Videos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] Light mode Video
 
-## Expanding the ESLint configuration
+[screen-capture (2).webm](https://github.com/user-attachments/assets/256f744f-3e41-4681-887e-fd0372dfd8ce)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+   - [x] Dark mode Video
+
+  [screen-capture (3).webm](https://github.com/user-attachments/assets/f0034eec-ebd1-4575-a7bd-293d5a6fdbd4)
